@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-map-resave
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-map-resave/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_map_resave
+    libfuzzer: true
+    timeout: 5

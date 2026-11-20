@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-png
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-png/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_png
+    libfuzzer: true
+    timeout: 5

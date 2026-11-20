@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-snapshot
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-snapshot/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_snapshot
+    libfuzzer: true
+    timeout: 5

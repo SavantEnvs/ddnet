@@ -1,0 +1,6 @@
+project: savantenvs/ddnet
+target: fuzz-huffman
+cmds:
+  - cmd: /mayhem/fuzz_huffman
+    libfuzzer: true
+    timeout: 5

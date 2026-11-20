@@ -1,0 +1,6 @@
+project: savantenvs/ddnet
+target: fuzz-stun
+cmds:
+  - cmd: /mayhem/fuzz_stun
+    libfuzzer: true
+    timeout: 5

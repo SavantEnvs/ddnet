@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-savestring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-savestring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_savestring
+    libfuzzer: true
+    timeout: 5

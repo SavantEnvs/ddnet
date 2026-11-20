@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-serverinfo
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-serverinfo/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_serverinfo
+    libfuzzer: true
+    timeout: 5

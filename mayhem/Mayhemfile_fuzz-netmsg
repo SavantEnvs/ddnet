@@ -1,0 +1,9 @@
+project: savantenvs/ddnet
+target: fuzz-netmsg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-netmsg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_netmsg
+    libfuzzer: true
+    timeout: 5
